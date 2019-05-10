@@ -1,5 +1,5 @@
 C=sassc
-FLAGS=-M -t nested
+FLAGS=-M -t compact
 THEME_NAME=Atiawda
 BUILD_DIR=build
 
