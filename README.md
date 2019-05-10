@@ -26,7 +26,7 @@ Run the following commands in the terminal:
 ```sh
 $ git clone https://github.com/SeptianTux/Atiawda.git
 $ cd Atiawda
-$ make install # you can use sudo if you want to install to /usr/share/themes
+$ make install # Use sudo if you want to install it to /usr/share/themes
 ```
 
 ## Uninstall
