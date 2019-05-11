@@ -1,3 +1,5 @@
+$border-radius: 3px;
+
 $pop-menu-arrow-width: 0em;
 
 $panel-radius: 0px;
@@ -9,12 +11,12 @@ $panel-panel-button-color: if($variant == 'light', darken(#2E3436, 12%), #ccc);
 $panel-panel-button-hover-color: if($variant == 'light', darken($fg_color, 10%), lighten($fg_color, 10%));
 
 $dash-bg-color: rgba(0, 0, 0, 0.5);
-$dash-border-radius: 0 3px 3px 0;
-$dash-rtl-border-radius: 3px 0 0 3px;
+$dash-border-radius: 0 $border-radius $border-radius 0;
+$dash-rtl-border-radius: $border-radius 0 0 $border-radius;
 $dash-dash-item-container-padding: 4px 4px;
 $dash-dash-laber-border-radius: 3px;
 
 $overview-window-clone-border : 3px;
-$overview-window-caption-border-radius: 3px;
-$overview-search-entry-border-radius: 3px;
+$overview-window-caption-border-radius: $border-radius;
+$overview-search-entry-border-radius: $border-radius;
 $overview-search-entry-border-width: 1px;

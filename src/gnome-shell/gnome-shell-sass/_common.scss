@@ -1500,9 +1500,9 @@ StScrollBar {
     visible-width: 32px; //amount visible before hover
     spacing: 11px;
     padding: 8px;
-    border-radius: 9px 0 0 9px;
+    border-radius: $border-radius 0 0 $border-radius;   // zxcv
     //border-width: 1px 0 1px 1px; //fixme: can't have non unoform borders :(
-    &:rtl { border-radius: 0 9px 9px 0;}
+    &:rtl { border-radius: 0 $border-radius $border-radius 0;}  // zxcv
 
     .placeholder {
       background-image: url("resource:///org/gnome/shell/theme/dash-placeholder.svg");
