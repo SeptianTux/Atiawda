@@ -1665,7 +1665,7 @@ headerbar {
         background-image: none;
         box-shadow: none;
         //min-height: 20px; // touched
-        padding: 6px 10px;
+        padding: $header-bar-selection-mode-selection-menu-padding; // touched
 
         arrow { -GtkArrow-arrow-scaling: 1; }
 
