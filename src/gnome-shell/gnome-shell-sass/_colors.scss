@@ -20,8 +20,8 @@ $error_color: #ff8080;
 $success_color: if($variant == 'light', #33d17a, darken(#33d17a, 10%));
 $destructive_color: if($variant == 'light', #e01b24, darken(#e01b24, 10%));
 
-$osd_fg_color: #eeeeec;
-$osd_bg_color: #2e3436;
+$osd_fg_color: if($variant == 'dark', #eeeeec, #2e3436);
+$osd_bg_color: if($variant == 'dark', #2e3436, #eeeeec);
 $osd_borders_color: transparentize(black, 0.3);
 $osd_outer_borders_color: transparentize(white, 0.9);
 

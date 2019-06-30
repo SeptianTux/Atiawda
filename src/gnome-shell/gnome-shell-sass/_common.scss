@@ -135,7 +135,7 @@ StScrollBar {
   -barlevel-active-background-color: $selected_bg_color; //active trough fill
   -barlevel-active-border-color: darken($selected_bg_color,10%); //active trough border
   -barlevel-overdrive-color: $destructive_color;
-  -barlevel-overdrive-border-color: darken($destructive_color,10%);
+  -barlevel-overdrive-border-color: if($variant == 'light', $destructive_color, darken($destructive_color,10%));  // asdf
   -barlevel-overdrive-separator-width: 0.2em;
   -barlevel-border-width: 1px;
   -slider-handle-radius: 6px;
@@ -177,7 +177,7 @@ StScrollBar {
 .flashspot { background-color: white; }
 
 .modal-dialog {
-  border-radius: 9px;
+  border-radius: $border-radius;    // asdf
   color: $osd_fg_color;
   background-color: transparentize(darken($osd_bg_color,10%),0.05);
   border: 1px solid $_bubble_borders_color;
@@ -1327,10 +1327,9 @@ StScrollBar {
   #dash {
     font-size: 9pt;
     color: $_bubble_fg_color;
-    background-color: $_bubble_bg_color;
-//    background-color: $dash_bg_color;
+    background-color: $dash_bg_color;   // asdf
     padding: 4px 0;
-    border: 1px solid rgba(128, 128, 128, 0.4);
+    border: $dash_border;
     border-left: 0px;
     border-radius: $dash-border-radius; // touched
 
@@ -1356,7 +1355,7 @@ StScrollBar {
   }
 
   .dash-label { //osd tooltip
-    border-radius: $dash-dash-laber-border-radius; // touched
+    border-radius: $border-radius; // touched
     padding: 4px 12px;
     color: $osd_fg_color;
     background-color: transparentize($osd_bg_color,0.3);
@@ -1544,11 +1543,12 @@ StScrollBar {
     font-size: 11pt;
     width: 34em;
     margin: 5px;
-    border-radius: 6px;
+    border-radius: $border_radius; // asdf
     color: $_bubble_fg_color;
     background-color: $_bubble_bg_color;
     border: 1px solid $borders_color;
     //box-shadow: 0 1px 4px black;
+    box-shadow: 0 2px 6px 2px transparentize(black, 0.7);
     &:hover { background-color: $_bubble_bg_color; }
     &:focus { background-color: $_bubble_bg_color; }
 
