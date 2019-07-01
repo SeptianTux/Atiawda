@@ -2,9 +2,9 @@
 Compact version of Adwaita theme.
 
 ## Preview
-![6](screenshot/6.png)
-![7](screenshot/7.png)
-![8](screenshot/8.png)
+![Screenshot 1](screenshot/1.png)
+![Screenshot 2](screenshot/2.png)
+![Screenshot 3](screenshot/3.png)
 
 ## Requirements
 
