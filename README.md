@@ -39,7 +39,11 @@ $ make uninstall # Use sudo if you install it in /usr/share/themes
 
 ### Font
 
-![5](screenshot/5.png)
+![Screenshot 0](screenshot/0.png)
+
+## Notes
+
+Saya membuat (mengedit) tema ini karena GNOME terlihat besar di monitor saya. Saya tidak berhasil mengkonfigurasi X server agar GNOME terlihat normal. Saya menggunakan monitor 24 inch 1920x1080 96dpi (LG 24MK600), mungkin akan terlihat aneh jika di gunakan di monitor yang berbeda.
 
 ## Upstream theme sources
 
