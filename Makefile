@@ -17,7 +17,7 @@ prepare:
 			mkdir -p $(BUILD_DIR)/$(THEME_NAME)/{gtk-3.0,gtk-2.0,gnome-shell}; \
 		fi
 		if [ ! -d $(BUILD_DIR)/$(THEME_NAME)-Dark ]; then \
-			mkdir -p $(BUILD_DIR)/$(THEME_NAME)-Dark/{gtk-3.0,gtk-2.0,gnome-shell}; \
+			mkdir -p $(BUILD_DIR)/$(THEME_NAME)-Dark/{gtk-3.0,gtk-2.0}; \
 		fi
 		if [ ! `which sassc 2> /dev/null` ]; then \
 			echo -e "\n\nsassc needs to be installed to generate the css.\n\n"; \
@@ -26,15 +26,13 @@ prepare:
 
 build:
 		$(C) $(FLAGS) src/gtk-3.0/gtk-contained.scss $(BUILD_DIR)/$(THEME_NAME)/gtk-3.0/gtk.css
-		# Skip this line $(C) $(FLAGS) src/gtk-3.0/gtk-contained-dark.scss $(BUILD_DIR)/$(THEME_NAME)/gtk-3.0/gtk-dark.css
 		$(C) $(FLAGS) src/gtk-3.0/gtk-contained.scss $(BUILD_DIR)/$(THEME_NAME)/gtk-3.0/gtk-dark.css
 		$(C) $(FLAGS) src/gtk-3.0/gtk-contained-dark.scss $(BUILD_DIR)/$(THEME_NAME)-Dark/gtk-3.0/gtk.css
 		cp -r src/gtk-3.0/assets $(BUILD_DIR)/$(THEME_NAME)/gtk-3.0
 		cp -r src/gtk-3.0/assets $(BUILD_DIR)/$(THEME_NAME)-Dark/gtk-3.0
 		cp -r src/gtk-2.0/light/* $(BUILD_DIR)/$(THEME_NAME)/gtk-2.0/
 		cp -r src/gtk-2.0/dark/* $(BUILD_DIR)/$(THEME_NAME)-Dark/gtk-2.0/
-		$(C) $(FLAGS) src/gnome-shell/gnome-shell.scss $(BUILD_DIR)/$(THEME_NAME)/gnome-shell/gnome-shell.css
-		$(C) $(FLAGS) src/gnome-shell/gnome-shell-dark.scss $(BUILD_DIR)/$(THEME_NAME)-Dark/gnome-shell/gnome-shell.css
+		$(C) $(FLAGS) src/gnome-shell/gnome-shell-dark.scss $(BUILD_DIR)/$(THEME_NAME)/gnome-shell/gnome-shell.css
 
 clean:
 		if [ -d $(BUILD_DIR)/$(THEME_NAME) ]; then \
